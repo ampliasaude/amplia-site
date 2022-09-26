@@ -34,4 +34,6 @@ function NascidosVivos() {
   );
 }
 
+NascidosVivos.tipo = "trilha";
+
 export default NascidosVivos;

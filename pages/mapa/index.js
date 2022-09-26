@@ -4,7 +4,9 @@ function Mapa() {
     return(<>
         <h1>Mapa - Em Construção</h1>
     </>)
-  }
-  
-  export default Mapa;
+}
+
+Mapa.tipo = "mapa";
+
+export default Mapa;
   

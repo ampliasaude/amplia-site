@@ -12,13 +12,13 @@ function MyApp({ Component, pageProps }) {
           </div>
         </Link>
         <Link href="/mapa">
-          <div className="botaoVisualizacao">
+          <div className={"botaoVisualizacao"+(Component.tipo == "mapa"?" selected":"")}>
               <Image src="/amplia-site/mapa.svg" width={36} height={36} />
               <span>MAPA</span>
           </div>
         </Link>
         <Link href="/trilhas/NascidosVivos">
-          <div className="botaoVisualizacao">
+          <div className={"botaoVisualizacao"+(Component.tipo == "trilha"?" selected":"")}>
             <Image src="/amplia-site/trilhas.svg" width={36} height={36} />
             <span>TRILHAS</span>
           </div>

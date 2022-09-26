@@ -44,6 +44,10 @@ div.cabecalho div.botaoVisualizacao {
   gap: 2px;
 }
 
+div.cabecalho div.botaoVisualizacao.selected {
+  background-color: #15147233;
+}
+
 div.cabecalho div.botaoVisualizacao span {
   font-size: 14px;
 }
