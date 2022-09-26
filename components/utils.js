@@ -25,6 +25,7 @@ function adjustObservableWidth(visRef, main) {
         let newWidth = visRef.current.clientWidth;
         if (newWidth !== width) {
           notify(width = newWidth);
+          console.log("Atualizou Largura!:", newWidth);
         }
       }
       addEventListener("resize", resized);
