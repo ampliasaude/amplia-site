@@ -20,15 +20,20 @@ function menuListener(inspector, router) {
 function adjustObservableWidth(visRef, main) {
     const library = new Library();
     main.redefine("width", library.Generators.observe(notify => {
-      let width = notify(visRef.current.clientWidth);
+      let width = 0;
       function resized() {
-        let newWidth = visRef.current.clientWidth;
-        if (newWidth !== width) {
-          notify(width = newWidth);
-          console.log("Atualizou Largura!:", newWidth);
+        if(visRef.current) {
+            let newWidth = visRef.current.clientWidth;
+            if (newWidth !== width) {
+              notify(width = newWidth);
+              console.log(width);
+            }    
+        } else {
+            setTimeout(resized);
         }
       }
       addEventListener("resize", resized);
+      setTimeout(resized);
       return () => removeEventListener("resize", resized);
     }));
 }
