@@ -1,4 +1,4 @@
-
+import {Library} from "@observablehq/runtime";
 
 function menuListener(inspector, router) {
     inspector._chain = inspector.fulfilled;
@@ -17,4 +17,19 @@ function menuListener(inspector, router) {
     return inspector;
 }
 
-module.exports = menuListener;
+function adjustObservableWidth(visRef, main) {
+    const library = new Library();
+    main.redefine("width", library.Generators.observe(notify => {
+      let width = notify(visRef.current.clientWidth);
+      function resized() {
+        let newWidth = visRef.current.clientWidth;
+        if (newWidth !== width) {
+          notify(width = newWidth);
+        }
+      }
+      addEventListener("resize", resized);
+      return () => removeEventListener("resize", resized);
+    }));
+}
+
+module.exports = { menuListener, adjustObservableWidth };
