@@ -1,0 +1,78 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);    
+
+body {
+  margin: 0px;
+  font-family: "Roboto Condensed";
+}
+
+div.blocoTrilha {
+  margin: 30px;
+}
+
+div.blocoLocal {
+  margin: 0px 20px;
+  height: 64px;
+}
+
+div.blocoMenu {
+  margin: 0px 20px;
+}
+
+div.cabecalho {
+  border-bottom: 1px #9c9c9c solid;
+  display: flex;
+  height: 64px;
+  align-items: stretch;
+}
+
+div.cabecalho div.logo {
+  padding: 0px 30px;
+  display: flex;
+  align-items: center;
+  border-right: 1px #9c9c9c solid;
+}
+
+div.cabecalho div.botaoVisualizacao {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  border-right: 1px #9c9c9c solid;
+  align-items: center;
+  justify-content: center;
+  color: #151472;
+  gap: 2px;
+}
+
+div.cabecalho div.botaoVisualizacao span {
+  font-size: 14px;
+}
+
+svg {
+	font-family: "Roboto Condensed";
+}
+
+rect.overlay {
+	stroke: none;
+}
+
+rect.selection {
+	stroke: none;
+  fill: rgba(21, 20, 114, 0.6);
+}
+
+#labelleft, #labelright, #labelright2, #labelleft2 {
+	dominant-baseline: hanging;
+  font-size: 12px;
+  font-weight: 400;
+  fill: #151472;
+}
+
+#labelleft, #labelleft2 {
+	text-anchor: end;
+}
+
+#labelright, #labelright2 {
+	text-anchor: start;
+}
+

@@ -1,0 +1,24 @@
+{
+  "name": "amplia-site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@observablehq/runtime": "4",
+    "c9796646f30224cb": "https://api.observablehq.com/d/c9796646f30224cb.tgz?v=3",
+    "7cdaac3198af0926": "https://api.observablehq.com/d/7cdaac3198af0926.tgz?v=3",
+    "bb9997bf0952f01b": "https://api.observablehq.com/d/bb9997bf0952f01b.tgz?v=3",
+    "next": "12.3.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "eslint": "8.24.0",
+    "eslint-config-next": "12.3.1"
+  }
+}
