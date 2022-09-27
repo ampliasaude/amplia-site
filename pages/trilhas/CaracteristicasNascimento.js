@@ -33,5 +33,5 @@ function CaracteristicasNascimento() {
     </>
   );
 }
-
+CaracteristicasNascimento.tipo = "trilha";
 export default CaracteristicasNascimento;
