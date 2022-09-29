@@ -26,7 +26,7 @@ function adjustObservableWidth(visRef, main) {
             let newWidth = Math.max(visRef.current.clientWidth,1340);
             if (newWidth !== width) {
               notify(width = newWidth);
-            }    
+            }
         } else {
             setTimeout(resized,10);
         }
