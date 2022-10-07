@@ -1,6 +1,6 @@
 import React, {useRef, useEffect} from "react";
 import {Runtime, Inspector} from "@observablehq/runtime";
-import notebook from "b335ec6d8256f69f";
+import notebook from "b05c33c572862dd7";
 import { adjustObservableWidth } from "../../components/utils";
 
 function Mapa() {
