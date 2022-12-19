@@ -29,6 +29,15 @@ div.cabecalho {
   align-items: stretch;
 }
 
+div.cabecalho div.filler {
+  flex-grow: 1;
+}
+
+div.cabecalho div.copyLink {
+  align-self: center;
+  margin-right: 10px;
+}
+
 div.cabecalho div.logo {
   padding: 0px 30px;
   display: flex;

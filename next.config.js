@@ -14,6 +14,11 @@ const nextConfig = {
         destination: '/trilhas/NascidosVivos',
         permanent: true,
       },
+      {
+        source: '/',
+        destination: '/mapa',
+        permanent: true,
+      },
     ]
   }
 }

@@ -1,10 +1,10 @@
 import React, {useRef, useEffect} from "react";
 import {Runtime, Inspector} from "@observablehq/runtime";
-import notebook from "bb9997bf0952f01b";
+import notebook from "@ampliasaude/mortalidade-infantil-v5";
 import { useRouter } from "next/router";
 import { menuListener, adjustObservableWidth } from "../../components/utils";
 
-function MortalidadeInfantil() {
+function MortalidadeInfantil({copyLinkRef}) {
   const visRef = useRef();
   const mpRef = useRef();
   const div_controlesRef = useRef();
@@ -18,7 +18,16 @@ function MortalidadeInfantil() {
       if (name === "vis") return new Inspector(visRef.current);
       if (name === "div_controles") return new Inspector(div_controlesRef.current);
       if (name === "style") return new Inspector(styleRef.current);
-      return ["menu_municipios","barra_municipios","gPESO","funcoesGeradoras","gROBSON","gTOTAL","checkFiltros","onfirstload","getCurrentConf","copyLinkButton","cabecalho"].includes(name);
+      if (name === "copyLinkButton") {
+        return {
+          fulfilled(value) {
+            setTimeout(()=>{
+              copyLinkRef.current.replaceChildren(value);
+            })
+          }
+        }
+      }
+      return ["menu_municipios","barra_municipios","gPESO","funcoesGeradoras","gROBSON","gTOTAL","checkFiltros","onfirstload","getCurrentConf","cabecalho"].includes(name);
     });
     adjustObservableWidth(visRef, main);
     return () => runtime.dispose();

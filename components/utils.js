@@ -20,7 +20,7 @@ function menuListener(inspector, router) {
 function adjustObservableWidth(visRef, main) {
     const library = new Library();
     main.redefine("width", library.Generators.observe(notify => {
-      let width = 1340;
+      let width = null;
       function resized() {
         if(visRef.current) {
             let newWidth = Math.max(visRef.current.clientWidth,1340);
